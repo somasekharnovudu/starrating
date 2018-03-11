@@ -25,9 +25,6 @@ var getRatings=()=>{
         
         
         document.querySelector(`.${rating} .number-rating`).innerHTML=ratings[rating];
-        
-
-
 
     }
 }
@@ -68,6 +65,7 @@ productSelect.addEventListener('change',(e)=>{
 
         getRatings();
 
-    })
+        productRating.disabled=true;
+    });
 })
 
