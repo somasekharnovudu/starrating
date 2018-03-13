@@ -1,3 +1,4 @@
+'use strict';
 // initliaze ratings
 
 const ratings={
@@ -12,6 +13,8 @@ const ratings={
 const starTotal=5;
 
 var getRatings=()=>{
+
+
     for(let rating in ratings){
         //Get percentage;
         let starpercentage= (ratings[rating]/5)*100;
@@ -41,6 +44,8 @@ let product;
 
 //Product Select change
 productSelect.addEventListener('change',(e)=>{
+ 
+
     let product=e.target.value;
     console.log(product);
 
@@ -53,7 +58,7 @@ productSelect.addEventListener('change',(e)=>{
     //rating control change;
 
     productRating.addEventListener('blur',(e)=>{
-        rating=e.target.value;
+        let rating=e.target.value;
         //check for maximum value;
         if(rating>5){
             alert("please rate 1-5");
@@ -65,7 +70,6 @@ productSelect.addEventListener('change',(e)=>{
 
         getRatings();
 
-        productRating.disabled=true;
     });
 })
 
